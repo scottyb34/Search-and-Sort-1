@@ -20,19 +20,61 @@ public class SearchSort {
 
     // takes a sorted array and returns the index of the desired string or -1 if not found
     public static int binarySearch(String[] arr, String lookfor) {
-        return -1;
+        return binarySearchHelper(arr, 0, arr.length, lookfor);
+    }
+
+    private static int binarySearchHelper(String[] arr, int lo, int hi, String lookfor) {
+        if(lo >= hi)
+            return -1;
+        int mid = (hi + lo) / 2;
+        int c = arr[mid].compareTo(lookfor);
+        if(c == 0)
+            return mid;
+        if(c < 0)
+            return binarySearchHelper(arr, mid + 1, hi, lookfor);
+        else
+            return binarySearchHelper(arr, lo, mid, lookfor);
     }
 
     public static String[] mergeSort(String[] arr) {
-        return null;
+        if(arr.length == 1)
+            return arr;
+        int mid = arr.length / 2;
+        String[] first = mergeSort(Arrays.copyOfRange(arr, 0, mid));
+        String[] second = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
+        return merge(first, second);
     }
 
     private static String[] merge(String[] a, String[] b) {
-        return null;
+        int anext = 0, bnext = 0, rnext = 0;
+        String[] ret = new String[a.length + b.length];
+
+        while(anext < a.length || bnext < b.length) {
+            String as = anext < a.length ? a[anext] : null;
+            String bs = bnext < b.length ? b[bnext] : null;
+            if(as == null) {
+                ret[rnext] = bs;
+                bnext++;
+            }
+            else if(bs == null) {
+                ret[rnext] = as;
+                anext++;
+            }
+            else if(as.compareTo(bs) < 0) {
+                ret[rnext] = as;
+                anext++;
+            }
+            else {
+                ret[rnext] = bs;
+                bnext++;
+            }
+            rnext++;
+        }
+        return ret;
     }
 
     public static void quickSort(String[] arr) {
-
+        // be brave, use google
     }
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -41,12 +83,20 @@ public class SearchSort {
         while(sc.hasNextLine())
             names.add(sc.nextLine());
         String[] arr = names.toArray(new String[0]);
+
+
         System.out.println(Arrays.toString(arr));
         bubbleSort(arr);
         System.out.println(Arrays.toString(arr));
-        //System.out.println(Arrays.toString(arr));
 
 
-        // call stuff
+        System.out.println(binarySearch(arr, "Chewbacca"));
+        System.out.println(binarySearch(arr, "Chewbaccawww"));
+
+
+        String[] arr2 = names.toArray(new String[0]);
+        arr2 = mergeSort(arr2);
+        System.out.println(Arrays.toString(arr2));
+
     }
 }
