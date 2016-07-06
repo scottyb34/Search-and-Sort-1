@@ -1,0 +1,27 @@
+Gial Ackbar
+Padmé Amidala
+BB-8
+Jar Jar Binks
+C-3PO
+Lando Calrissian
+Chewbacca
+Poe Dameron
+Count Dooku
+Jyn Erso
+Boba Fett
+Finn
+Saw Gerrera
+Jabba the Hutt
+Maz Kanata
+Obi-Wan Kenobi
+Darth Maul
+Leia Organa
+Sheev Palpatine
+R2-D2
+Kylo Ren
+Rey
+Luke Skywalker
+Han Solo
+Grand Moff
+Mace Windu
+Yoda
