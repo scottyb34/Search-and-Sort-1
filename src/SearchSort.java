@@ -39,7 +39,7 @@ public class SearchSort {
     }
 
     private static String[] merge(String[] a, String[] b) {
-        //takes two unsorted string arrays and makes them one sorted string array. 
+        //takes two sorted string arrays and makes them one sorted string array. 
         //ie: a = t and b = z results in an array of t,z
         //ie: a = a,z,f and b = b,c,h results in an array of a,b,c,f,h,z
         
