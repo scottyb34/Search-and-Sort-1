@@ -20,10 +20,15 @@ public class SearchSort {
 
     // takes a sorted array and returns the index of the desired string or -1 if not found
     public static int binarySearch(String[] arr, String lookfor) {
+        //call binarySearchHelper
         return binarySearchHelper(arr, 0, arr.length, lookfor);
     }
 
     private static int binarySearchHelper(String[] arr, int lo, int hi, String lookfor) {
+        //this should be done recursively.  Assume that the passed in array is sorted.  Look at the 
+        //midpoint of the array and see if the string lookfor comes before or after the midpoint.
+        //Then recursively call binarySearchHelper with the part of the array that you think holds "lookfor"
+        //What are your base cases?  Handle the case where the string is not found.
         if(lo >= hi)
             return -1;
         int mid = (hi + lo) / 2;
