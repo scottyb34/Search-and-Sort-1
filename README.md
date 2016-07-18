@@ -12,5 +12,4 @@ Binary Search works just like looking up a word in a dictionary or a number in a
 Now for practice we are gonig to do a merge sort. I am not going to lie, this one is kind of tough.  Basically, it breaks down the array until it has only two indexes sorts them back together.  Now it has two, two length arrays.  It merges those backtogether into one sorted array and so on until it has an original sorted array.  [Khan Academy Walk Through](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort), [Text Description and some psudo code] (http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/mergeSort.htm), [Dancing Explination] (https://www.youtube.com/watch?v=XaqR3G_NVoo)
 
 ##Quick Sort
-This is the challenge... best of luck.
-
+[Khan Academy Walk Through](https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/overview-of-quicksort). Videos: [this video](https://www.youtube.com/watch?v=aQiWF4E8flQ) is very thourough, and this guy [shows a way](https://www.youtube.com/watch?v=MZaf_9IZCrc) to implement it with moving pointers.
